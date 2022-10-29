@@ -1,0 +1,28 @@
+{
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "name": "@dsrca/cdn",
+  "version": "1.0.0",
+  "description": "Static assets package for DSR projects.",
+  "author": "DSRKafuU <dsrkafuu@outlook.com>",
+  "license": "AGPL-3.0",
+  "main": "./lib/index.js",
+  "module": "./lib/index.esm.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "build": "node ./build.js"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "eslint": "^8.26.0",
+    "fs-extra": "^10.1.0",
+    "glob": "^8.0.3",
+    "nodemon": "^2.0.20",
+    "zx": "^7.1.1"
+  }
+}

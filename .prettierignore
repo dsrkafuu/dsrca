@@ -1,0 +1,11 @@
+node_modules/
+pnpm-lock.yaml
+
+.next/
+.turbo/
+
+coverage/
+out/
+build/
+
+.DS_Store

@@ -1,0 +1,5 @@
+{
+  "watch": ["public", "src", "types"],
+  "exec": "pnpm run build",
+  "ext": "*"
+}
