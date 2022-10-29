@@ -1,5 +1,5 @@
 {
   "watch": ["public", "src", "types"],
-  "exec": "pnpm run build",
+  "exec": "npm run build",
   "ext": "*"
 }

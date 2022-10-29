@@ -11,11 +11,8 @@
   color: var(--color-font);
   background-color: transparent;
   border: 1px solid var(--color-border);
-
-  &:hover,
-  &:active {
-    transition: background-color $trans-fast ease;
-  }
+  transition: color $trans-fast, background-color $trans-fast,
+    border-color $trans-fast;
 
   &:hover {
     background-color: var(--color-bg-hover);
