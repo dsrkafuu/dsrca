@@ -1,6 +1,8 @@
 {
-  "css.lint.unknownAtRules": "ignore",
   "css.lint.vendorPrefix": "ignore",
-  "scss.lint.unknownAtRules": "ignore",
   "scss.lint.vendorPrefix": "ignore"
+  // "eslint.workingDirectories": [
+  //   { "pattern": "./apps/*/" },
+  //   { "pattern": "./packages/*/" }
+  // ]
 }

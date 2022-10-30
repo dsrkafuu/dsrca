@@ -7,17 +7,24 @@ const esbuild = require('esbuild');
 const pkg = require('./package.json');
 
 async function buildSCSS() {
-  const outDir = path.resolve(__dirname, './style');
-  fse.ensureDirSync(outDir);
+  const srcDir = path.resolve(__dirname, './src');
+  const outDir1 = path.resolve(__dirname, './lib');
+  const outDir2 = path.resolve(__dirname, './es');
+  fse.ensureDirSync(outDir1);
+  fse.ensureDirSync(outDir2);
   const scssFiles = glob
-    .sync('./src/style/*.scss', { cwd: __dirname })
+    .sync('./src/**/*.scss', { cwd: __dirname })
     .map((file) => path.resolve(__dirname, file));
 
   const workers = scssFiles.map((file) => {
     return new Promise((resolve, reject) => {
       try {
-        const output = path.resolve(outDir, path.basename(file));
-        fse.copyFileSync(file, output);
+        const output1 = path.resolve(outDir1, path.relative(srcDir, file));
+        const output2 = path.resolve(outDir2, path.relative(srcDir, file));
+        fse.ensureDirSync(path.dirname(output1));
+        fse.ensureDirSync(path.dirname(output2));
+        fse.copyFileSync(file, output1);
+        fse.copyFileSync(file, output2);
         resolve();
       } catch (e) {
         reject(e);
@@ -36,7 +43,7 @@ async function buildJS() {
       try {
         esbuild.buildSync({
           entryPoints: glob
-            .sync('src/lib/**/*.@(js|jsx|ts|tsx)', { cwd: __dirname })
+            .sync('src/**/*.@(js|jsx|ts|tsx)', { cwd: __dirname })
             .map((file) => path.resolve(__dirname, file)),
           outdir: outDir,
           sourcemap: true,

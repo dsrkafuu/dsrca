@@ -1,11 +1,18 @@
-node_modules/
-pnpm-lock.yaml
-
-.next/
 .turbo/
+.next/
+node_modules/
 
-coverage/
-out/
-build/
+/packages/cdn/lib/
 
+/packages/design/es/
+/packages/design/lib/
+/packages/design/style/
+
+/packages/react/docs/
+/packages/react/es/
+/packages/react/lib/
+
+*-lock.*
+*.lock
+*.tsbuildinfo
 .DS_Store

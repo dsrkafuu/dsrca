@@ -1,4 +1,4 @@
-import styles from './index.module.scss';
+import './index.scss';
 import clsx from 'clsx';
 
 export type ButtonType = 'default' | 'primary' | 'success' | 'danger';
@@ -12,10 +12,10 @@ export interface ButtonProps {
 function Button({ type, children, ...props }: ButtonProps) {
   return (
     <button
-      className={clsx(styles.button, {
-        [styles.primary]: type === 'primary',
-        [styles.success]: type === 'success',
-        [styles.danger]: type === 'danger',
+      className={clsx('dsr-button', {
+        'dsr-button__primary': type === 'primary',
+        'dsr-button__success': type === 'success',
+        'dsr-button__danger': type === 'danger',
       })}
       {...props}
     >

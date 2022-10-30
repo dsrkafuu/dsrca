@@ -1,4 +1,4 @@
-import styles from './index.module.scss';
+import './index.scss';
 import clsx from 'clsx';
 
 export type CardMode = 'default' | 'outline';
@@ -21,13 +21,13 @@ function Card({
 }: CardProps) {
   return (
     <div
-      className={clsx(styles.card, {
-        [styles.default]: mode === 'default',
-        [styles.outline]: mode === 'outline',
-        [styles.sm]: size === 'sm',
-        [styles.md]: size === 'md',
-        [styles.lg]: size === 'lg',
-        [styles.plain]: !!plain,
+      className={clsx('dsr-card', {
+        'dsr-card__default': mode === 'default',
+        'dsr-card__outline': mode === 'outline',
+        'dsr-card__sm': size === 'sm',
+        'dsr-card__md': size === 'md',
+        'dsr-card__lg': size === 'lg',
+        'dsr-card__plain': !!plain,
       })}
       {...props}
     >
