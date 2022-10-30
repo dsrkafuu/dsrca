@@ -1,5 +1,27 @@
+@import '@dsrca/design/style/variables.scss';
+
 .page {
   flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  padding: $space-sm $space-md;
+}
+
+.avatar {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: $space-md * 2;
+}
+
+.image {
+  width: 128px;
+  height: 128px;
   display: flex;
   justify-content: center;
   align-items: center;
