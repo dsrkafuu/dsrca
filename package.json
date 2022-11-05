@@ -10,11 +10,6 @@
     "apps/*",
     "packages/*"
   ],
-  "scripts": {
-    "postinstall": "turbo run build --filter=./packages/*",
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel"
-  },
   "devDependencies": {
     "@dsrca/config": "*",
     "eslint": "^8.26.0",
