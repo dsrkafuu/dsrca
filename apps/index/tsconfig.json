@@ -1,0 +1,9 @@
+{
+  "extends": "@dsrca/config",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx"]
+}

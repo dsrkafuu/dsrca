@@ -1,0 +1,12 @@
+{
+  "extends": "@dsrca/config",
+  "compilerOptions": {
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "jsx": "react",
+    "rootDir": "./src",
+    "outDir": "./lib"
+  },
+  "exclude": ["node_modules", "*.stories.jsx"],
+  "include": ["./src", "client.d.ts"]
+}
