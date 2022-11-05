@@ -14,20 +14,20 @@
     "@dsrca/cdn": "*",
     "@dsrca/design": "*",
     "@dsrca/react": "*",
-    "@next/font": "^13.0.0",
-    "next": "~13.0.0",
-    "next-transpile-modules": "^9.1.0",
-    "react": "~18.2.0",
-    "react-dom": "~18.2.0"
+    "next": "^13.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
+    "sakana-widget": "^2.4.1"
   },
   "devDependencies": {
     "@dsrca/config": "*",
-    "@types/node": "^18.11.7",
-    "@types/react": "^18.0.24",
+    "@svgr/webpack": "^6.5.1",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "eslint": "^8.26.0",
-    "next-i18next": "^12.1.0",
-    "sass": "^1.55.0",
+    "sass": "^1.56.0",
     "typescript": "^4.8.4"
   }
 }

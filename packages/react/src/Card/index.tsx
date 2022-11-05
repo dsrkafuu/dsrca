@@ -1,4 +1,5 @@
 import './index.scss';
+import React from 'react';
 import clsx from 'clsx';
 
 export type CardMode = 'default' | 'outline';

@@ -7,12 +7,14 @@
   border-radius: $radius-sm;
   font-size: $font-md;
   height: 32px;
-  padding: 4px 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 $space-sm;
   color: var(--color-font);
   background-color: transparent;
-  border: 1px solid var(--color-border);
-  transition: color $trans-fast, background-color $trans-fast,
-    border-color $trans-fast;
+  border: 1px solid transparent;
+  text-decoration: none;
 
   &:hover {
     background-color: var(--color-bg-hover);
@@ -69,6 +71,21 @@
     &:active {
       background-color: var(--color-danger-active);
       border-color: var(--color-danger-active);
+    }
+  }
+
+  &__outline {
+    border-color: var(--color-border);
+  }
+
+  &__icon-only {
+    padding: 0;
+    width: 32px;
+  }
+
+  &__icon-text {
+    & > svg:first-child {
+      margin-right: 6px;
     }
   }
 }

@@ -3,8 +3,9 @@
   "compilerOptions": {
     "noEmit": false,
     "emitDeclarationOnly": true,
-    "jsx": "react-jsx",
-    "rootDir": "./src"
+    "jsx": "react",
+    "rootDir": "./src",
+    "outDir": "./lib"
   },
   "exclude": ["node_modules", "*.stories.jsx"],
   "include": ["./src", "client.d.ts"]

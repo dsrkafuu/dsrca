@@ -1,3 +1,5 @@
+import React from 'react';
+import { FaCompactDisc } from 'react-icons/fa';
 import { Button } from '../src';
 
 export default {
@@ -19,14 +21,15 @@ Primary.args = {
   children: 'Button',
 };
 
-export const Success = Template.bind({});
-Success.args = {
-  type: 'success',
-  children: 'Button',
+export const IconOnly = Template.bind({});
+IconOnly.args = {
+  type: 'primary',
+  icon: <FaCompactDisc />,
 };
 
-export const Danger = Template.bind({});
-Danger.args = {
-  type: 'danger',
+export const IconText = Template.bind({});
+IconText.args = {
+  type: 'primary',
+  icon: <FaCompactDisc />,
   children: 'Button',
 };

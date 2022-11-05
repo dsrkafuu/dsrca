@@ -10,19 +10,56 @@
 .content {
   display: flex;
   padding: $space-sm $space-md;
+
+  @include responsive('sm') {
+    flex-direction: column;
+    padding-top: $space-md;
+  }
 }
 
 .avatar {
   position: relative;
-  border-radius: 50%;
   overflow: hidden;
   margin-right: $space-md * 2;
+
+  @include responsive('sm') {
+    margin-right: 0;
+    margin-bottom: $space-md;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .image {
+  border-radius: 50%;
   width: 128px;
   height: 128px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.metadata {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+}
+
+.name {
+  font-size: 25px;
+  margin: 0;
+}
+
+.bio {
+  white-space: nowrap;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: $space-xs;
 }

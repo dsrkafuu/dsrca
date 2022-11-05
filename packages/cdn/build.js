@@ -9,7 +9,7 @@ fse.ensureDirSync(distPath);
 fse.emptyDirSync(distPath);
 
 const startTime = Date.now();
-console.log(chalk.blue(`[builder] [${pkg.name}] start building...`));
+console.log(chalk.blue(`[${pkg.name}] start building...`));
 
 // 递归复制所有源文件路径
 const srcPath = path.join(__dirname, './src');
@@ -42,7 +42,6 @@ function jsdelivr(relpath) {
     pkg.version
   }/lib/${relpath.replace(/\\/g, '/')}`;
 }
-
 let cjsTemplate = 'module.exports = {\n';
 let esmTemplate = '';
 let typeTemplate = '';
@@ -70,6 +69,4 @@ fse.writeFileSync(path.join(distPath, 'index.esm.js'), esmTemplate.trim());
 fse.writeFileSync(path.join(distPath, 'index.d.ts'), typeTemplate.trim());
 
 const endTime = Date.now();
-console.log(
-  chalk.blue(`[builder] [${pkg.name}] done within ${endTime - startTime}ms`)
-);
+console.log(chalk.blue(`[${pkg.name}] done within ${endTime - startTime}ms`));

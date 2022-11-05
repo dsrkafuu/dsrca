@@ -36,3 +36,19 @@ $family-mono: 'Fira Code', $family-cjk, monospace;
 
 $filter-blur: saturate(180%) blur(3px);
 $filter-mica: saturate(200%) blur(24px);
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $breakpoint == 'md' {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == 'lg' {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+}

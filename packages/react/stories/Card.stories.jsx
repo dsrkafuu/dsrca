@@ -1,3 +1,4 @@
+import React from 'react';
 import { backgrounds } from '../.storybook/constants';
 import { Card } from '../src';
 

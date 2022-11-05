@@ -1,11 +1,12 @@
-const transpileModules = require('next-transpile-modules');
-
-const withTranspileModules = transpileModules(['@dsrca/react']);
-
 /** @type {import('next').NextConfig} */
-module.exports = withTranspileModules({
+module.exports = {
   reactStrictMode: true,
-  images: {
-    domains: ['cdn.jsdelivr.net'],
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
   },
-});
+};
