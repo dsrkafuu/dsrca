@@ -13,6 +13,7 @@ export interface ButtonProps {
   type?: ButtonType;
   icon?: React.ReactNode;
   href?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
   className?: string;
   children?: React.ReactNode;
   [key: string]: unknown;
@@ -22,6 +23,7 @@ function Button({
   type,
   icon,
   href,
+  onClick,
   className,
   children,
   ...props
@@ -30,6 +32,7 @@ function Button({
 
   return (
     <Component
+      onClick={onClick}
       className={clsx(
         'dsr-button',
         {

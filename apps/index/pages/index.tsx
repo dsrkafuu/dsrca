@@ -1,7 +1,8 @@
 import styles from './index.module.scss';
-import React from 'react';
+import React, { useCallback } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import { event } from 'nextjs-google-analytics';
 import { Button, Card } from '@dsrca/react';
 import {
   FaBlog,
@@ -13,6 +14,14 @@ import {
 import avatarImage from '../assets/dsrkafuu_1280p.jpg';
 
 function Home() {
+  const reportClick = useCallback((eventName: string, e: React.MouseEvent) => {
+    const target = e.target;
+    if (target instanceof HTMLElement) {
+      const href = target.getAttribute('href');
+      event(eventName, { href });
+    }
+  }, []);
+
   return (
     <div className={styles.page}>
       <Head>
@@ -35,26 +44,31 @@ function Home() {
             <span className={styles.bio}>Internet for people, not profit</span>
             <div className={styles.links}>
               <Button
+                onClick={(e) => reportClick('goto_blog', e)}
                 icon={<FaBlog />}
                 href='https://blog.dsrkafuu.net/'
                 target='_blank'
               />
               <Button
+                onClick={(e) => reportClick('goto_github', e)}
                 icon={<FaGithub />}
                 href='https://github.com/dsrkafuu'
                 target='_blank'
               />
               <Button
+                onClick={(e) => reportClick('goto_twitter', e)}
                 icon={<FaTwitter />}
                 href='https://twitter.com/dsrkafuu'
                 target='_blank'
               />
               <Button
+                onClick={(e) => reportClick('goto_bgm', e)}
                 icon={<FaCompactDisc />}
                 href='https://bgm.tv/user/amzrk2'
                 target='_blank'
               />
               <Button
+                onClick={(e) => reportClick('goto_steam', e)}
                 icon={<FaSteam />}
                 href='https://steamcommunity.com/id/dsrkafuu/'
                 target='_blank'
