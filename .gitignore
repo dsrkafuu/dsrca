@@ -12,7 +12,5 @@ node_modules/
 /packages/react/es/
 /packages/react/lib/
 
-*-lock.*
-*.lock
 *.tsbuildinfo
 .DS_Store
