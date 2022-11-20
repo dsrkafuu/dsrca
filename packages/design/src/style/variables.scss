@@ -43,11 +43,11 @@ $filter-mica: saturate(200%) blur(24px);
       @content;
     }
   } @else if $breakpoint == 'md' {
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
       @content;
     }
   } @else if $breakpoint == 'lg' {
-    @media (min-width: 992px) {
+    @media (max-width: 992px) {
       @content;
     }
   }

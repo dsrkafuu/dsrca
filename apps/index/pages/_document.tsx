@@ -26,6 +26,7 @@ function Document() {
         <link rel='icon' sizes='192x192' href={pwa192Icon} />
         <link rel='icon' sizes='512x512' href={pwa512Icon} />
         <link rel='apple-touch-icon' sizes='180x180' href={appleIcon} />
+        <meta name='author' content='DSRKafuU' />
       </Head>
       <body>
         <Main />

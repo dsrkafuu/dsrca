@@ -26,6 +26,7 @@ function Home() {
     <div className={styles.page}>
       <Head>
         <title>DSRKafuU</title>
+        <meta name='description' content='Internet for people, not profit' />
       </Head>
       <Card>
         <div className={styles.content}>
