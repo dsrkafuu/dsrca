@@ -3,7 +3,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "name": "@dsrca/react",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "React components for DSR projects.",
   "author:": "DSRKafuU <dsrkafuu@outlook.com>",
   "license": "AGPL-3.0",
