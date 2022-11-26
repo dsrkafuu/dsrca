@@ -1,16 +1,9 @@
-.turbo/
-.next/
 node_modules/
 
-/packages/cdn/lib/
-
-/packages/design/es/
-/packages/design/lib/
-/packages/design/style/
-
-/packages/react/docs/
-/packages/react/es/
-/packages/react/lib/
+packages/*/docs/
+packages/*/es/
+packages/*/lib/
+packages/*/style/
 
 *.tsbuildinfo
 .DS_Store

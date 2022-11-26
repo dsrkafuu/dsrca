@@ -1,8 +1,0 @@
-{
-  "css.lint.vendorPrefix": "ignore",
-  "scss.lint.vendorPrefix": "ignore"
-  // "eslint.workingDirectories": [
-  //   { "pattern": "./apps/*/" },
-  //   { "pattern": "./packages/*/" }
-  // ]
-}

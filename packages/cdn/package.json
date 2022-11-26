@@ -3,7 +3,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "name": "@dsrca/cdn",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Static assets package for DSR projects.",
   "author": "DSRKafuU <dsrkafuu@outlook.com>",
   "license": "AGPL-3.0",
@@ -18,7 +18,7 @@
     "dev": "nodemon --ext * --watch src ./build.js"
   },
   "devDependencies": {
-    "@dsrca/config": "*",
+    "@dsrca/config": "workspace:*",
     "@types/node": "^18.11.9",
     "chalk": "^4.1.2",
     "eslint": "^8.28.0",
