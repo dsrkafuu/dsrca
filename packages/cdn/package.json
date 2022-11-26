@@ -3,7 +3,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "name": "@dsrca/cdn",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Static assets package for DSR projects.",
   "author": "DSRKafuU <dsrkafuu@outlook.com>",
   "license": "AGPL-3.0",
