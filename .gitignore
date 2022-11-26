@@ -1,9 +1,8 @@
 node_modules/
-
-packages/*/docs/
+packages/*/.dumi/tmp*/
+packages/*/dist/
 packages/*/es/
 packages/*/lib/
 packages/*/style/
-
 *.tsbuildinfo
 .DS_Store

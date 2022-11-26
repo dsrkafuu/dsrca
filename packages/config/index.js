@@ -4,11 +4,10 @@ const eslint = {
   base: require('./eslint/base'),
   react: require('./eslint/react'),
   next: require('./eslint/next'),
-  storybook: require('./eslint/storybook'),
 };
 
 /**
- * @param {'base'|'react'|'next'|'storybook'} preset
+ * @param {'base'|'react'|'next'} preset
  * @param {import('eslint').ESLint.ConfigData} config
  * @returns {import('eslint').ESLint.ConfigData}
  */

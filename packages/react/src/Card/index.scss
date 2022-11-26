@@ -1,0 +1,34 @@
+@import '@dsrca/design/style/variables.scss';
+
+.dsr-card {
+  display: block;
+
+  &__default {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-bg);
+    box-shadow: var(--box-shadow);
+  }
+
+  &__outline {
+    border: 1px solid var(--color-border);
+  }
+
+  &__lg {
+    padding: $space-lg;
+    border-radius: $radius-lg;
+  }
+
+  &__md {
+    padding: $space-md;
+    border-radius: $radius-md;
+  }
+
+  &__sm {
+    padding: $space-sm;
+    border-radius: $radius-sm;
+  }
+
+  &__plain {
+    padding: 0;
+  }
+}
