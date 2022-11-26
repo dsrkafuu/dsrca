@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "dsrca",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "Monorepo for DSR projects.",
   "author": "DSRKafuU <dsrkafuu@outlook.com>",
   "license": "AGPL-3.0",
