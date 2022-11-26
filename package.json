@@ -9,6 +9,7 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "lerna run dev",
     "build": "lerna run build"
   },
   "devDependencies": {

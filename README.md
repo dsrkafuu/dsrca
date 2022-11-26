@@ -2,10 +2,6 @@
 
 Monorepo for DSR projects.
 
-### Apps
-
-- `@dsrca/index`
-
 ### Packages
 
 - `@dsrca/cdn`
