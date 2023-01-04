@@ -2,11 +2,19 @@ import { defineConfig } from 'father';
 
 export default defineConfig({
   esm: {
-    transformer: 'esbuild',
     output: './es',
+    targets: {
+      chrome: 87,
+      firefox: 78,
+      safari: 14,
+    },
   },
   cjs: {
-    transformer: 'esbuild',
     output: './lib',
+    targets: {
+      chrome: 87,
+      firefox: 78,
+      safari: 14,
+    },
   },
 });
