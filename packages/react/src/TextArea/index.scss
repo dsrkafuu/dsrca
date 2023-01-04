@@ -1,0 +1,36 @@
+@import '@dsrca/design/style/variables.scss';
+
+.dsr-textarea {
+  appearance: none;
+  outline: none;
+  border: none;
+  border-radius: $radius-sm;
+  font-size: $font-md;
+  font-family: inherit;
+  padding: 0 8px;
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  min-height: 32px;
+  padding: 6px 10px;
+  color: var(--color-font);
+  text-decoration: none;
+  transition: background-color $trans-fast ease, border-color $trans-fast ease,
+    color $trans-fast ease;
+
+  &__default {
+    background-color: transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--color-bg-hover);
+    }
+  }
+
+  &__outline {
+    border: 1px solid var(--color-border);
+  }
+}

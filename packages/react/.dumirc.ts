@@ -4,6 +4,12 @@ export default defineConfig({
   outputPath: './dist',
   themeConfig: {
     name: 'react',
+    nav: [
+      {
+        title: 'Docs',
+        link: '/components/button',
+      },
+    ],
   },
   links: [
     {
