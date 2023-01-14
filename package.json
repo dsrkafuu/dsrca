@@ -1,4 +1,7 @@
 {
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "private": true,
   "name": "dsrca",
   "version": "1.0.0",
