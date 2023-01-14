@@ -7,15 +7,14 @@ Monorepo for DSR projects.
 - `@dsrca/cdn`
 - `@dsrca/config`
 - `@dsrca/design`
-- `@dsrca/react`
 
-### Browsers
+## Browsers Support
 
 Supports major browser versions released at 2020 or `ES2020`.
 
-- Chrome: 87
-- Firefox: 78
-- Safari: 14
+- Chrome: >=87
+- Firefox: >=78
+- Safari: >=14
 
 ### License
 

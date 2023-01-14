@@ -1,9 +1,0 @@
-@import '@dsrca/design/style/variables.scss';
-@import '@dsrca/design/style/colors.scss';
-@include dsr-colors-full;
-@import '@dsrca/design/style/reset.scss';
-
-.dumi-default-doc-layout,
-.markdown {
-  font-family: $family-body !important;
-}

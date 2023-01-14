@@ -1,6 +1,7 @@
 const path = require('path');
 const fse = require('fs-extra');
 const chalk = require('chalk');
+const umd = require('umd');
 const minify = require('./minify');
 const pkg = require('./package.json');
 
@@ -64,7 +65,10 @@ const genFolderHTML = (folder) => {
   });
 };
 genFolderHTML(distPath);
-fse.writeFileSync(path.join(distPath, 'index.js'), `${cjsTemplate}};`.trim());
+fse.writeFileSync(
+  path.join(distPath, 'index.js'),
+  umd('@dsrca/cdn', `${cjsTemplate}};`, { commonJS: true }).trim()
+);
 fse.writeFileSync(path.join(distPath, 'index.esm.js'), esmTemplate.trim());
 fse.writeFileSync(path.join(distPath, 'index.d.ts'), typeTemplate.trim());
 
