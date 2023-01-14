@@ -11,8 +11,7 @@
   "scripts": {
     "dev": "lerna run dev",
     "build": "lerna run build",
-    "ver": "lerna version",
-    "pub": "lerna publish"
+    "publish": "lerna publish"
   },
   "devDependencies": {
     "@dsrca/config": "workspace:*",
