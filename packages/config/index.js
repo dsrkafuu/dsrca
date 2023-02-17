@@ -3,11 +3,10 @@ const { merge, cloneDeep } = require('lodash');
 const eslint = {
   base: require('./eslint/base'),
   react: require('./eslint/react'),
-  next: require('./eslint/next'),
 };
 
 /**
- * @param {'base'|'react'|'next'} preset
+ * @param {'base'|'react'} preset
  * @param {import('eslint').ESLint.ConfigData} config
  * @returns {import('eslint').ESLint.ConfigData}
  */

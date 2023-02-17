@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/npm/v/@dsrca/design)](https://www.npmjs.com/package/@dsrca/design)
 
-Styles & library for DSR projects.
+Styles for DSR projects.
 
 ## Browsers Support
 

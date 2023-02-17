@@ -1,6 +1,6 @@
-const fse = require('fs-extra');
+import fse from 'fs-extra';
 
-function minify(srcfile, destfile) {
+export default function minify(srcfile, destfile) {
   // JSON
   if (/\.json$/i.test(srcfile)) {
     const json = fse.readJSONSync(srcfile);
@@ -19,5 +19,3 @@ function minify(srcfile, destfile) {
     };
   }
 }
-
-module.exports = minify;

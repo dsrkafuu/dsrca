@@ -2,6 +2,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
+  "type": "module",
   "name": "@dsrca/cdn",
   "version": "2.2.1",
   "description": "Static assets package for DSR projects.",
@@ -11,23 +12,16 @@
     "lib"
   ],
   "main": "./lib/index.js",
-  "module": "./lib/index.esm.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "build": "node ./build.js",
-    "dev": "nodemon --ext * --watch src ./build.js"
+    "build": "node --experimental-specifier-resolution=node ./build.js"
   },
   "devDependencies": {
-    "@dsrca/config": "workspace:*",
     "@types/fs-extra": "^11.0.1",
-    "@types/node": "^18.11.18",
-    "@types/umd": "^3.0.1",
-    "chalk": "^4.1.2",
-    "eslint": "^8.31.0",
+    "@types/node": "^18.13.0",
+    "chalk": "^5.2.0",
     "fs-extra": "^11.1.0",
-    "glob": "^8.0.3",
-    "nodemon": "^2.0.20",
-    "typescript": "^4.9.4",
-    "umd": "^3.0.3"
+    "glob": "^8.1.0",
+    "typescript": "^4.9.5"
   }
 }

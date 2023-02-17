@@ -1,12 +1,3 @@
 node_modules/
-
-/packages/cdn/lib/
-
-/packages/design/es/
-/packages/design/lib/
-/packages/design/style/
-
-*.tsbuildinfo
-*-lock.*
-*.lock
+lib/
 .DS_Store

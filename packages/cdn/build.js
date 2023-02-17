@@ -1,9 +1,11 @@
-const path = require('path');
-const fse = require('fs-extra');
-const chalk = require('chalk');
-const umd = require('umd');
-const minify = require('./minify');
-const pkg = require('./package.json');
+import path from 'path';
+import url from 'url';
+import fse from 'fs-extra';
+import chalk from 'chalk';
+import minify from './minify';
+
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
+const pkg = fse.readJSONSync(path.resolve(__dirname, './package.json'));
 
 const distPath = path.join(__dirname, './lib');
 fse.ensureDirSync(distPath);
@@ -43,7 +45,6 @@ function jsdelivr(relpath) {
     pkg.version
   }/lib/${relpath.replace(/\\/g, '/')}`;
 }
-let cjsTemplate = 'module.exports = {\n';
 let esmTemplate = '';
 let typeTemplate = '';
 const genFolderHTML = (folder) => {
@@ -52,9 +53,6 @@ const genFolderHTML = (folder) => {
     if (fse.statSync(filePath).isDirectory()) {
       genFolderHTML(filePath);
     } else {
-      cjsTemplate += `  ${name(filePath).toUpperCase()}: '${jsdelivr(
-        path.relative(distPath, filePath)
-      )}',\n`;
       esmTemplate += `export const ${name(
         filePath
       ).toUpperCase()} = '${jsdelivr(path.relative(distPath, filePath))}';\n`;
@@ -65,11 +63,7 @@ const genFolderHTML = (folder) => {
   });
 };
 genFolderHTML(distPath);
-fse.writeFileSync(
-  path.join(distPath, 'index.js'),
-  umd('@dsrca/cdn', `${cjsTemplate}};`, { commonJS: true }).trim()
-);
-fse.writeFileSync(path.join(distPath, 'index.esm.js'), esmTemplate.trim());
+fse.writeFileSync(path.join(distPath, 'index.js'), esmTemplate.trim());
 fse.writeFileSync(path.join(distPath, 'index.d.ts'), typeTemplate.trim());
 
 const endTime = Date.now();
