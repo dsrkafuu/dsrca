@@ -7,11 +7,13 @@ Static assets package for DSR projects.
 
 ## Browsers Support
 
-Supports major browser versions released at 2020 or `ES2020`.
+Supports same browsers as Vite 4.
 
-- Chrome: >=87
-- Firefox: >=78
-- Safari: >=14
+https://vitejs.dev/config/build-options.html
+
+```js
+['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14'];
+```
 
 ## License
 
