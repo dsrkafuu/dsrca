@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-@mixin dsr-markdown {
+@mixin dsr-markdown-style {
   .markdown {
     line-height: $line-height-md;
     font-size: $font-md;

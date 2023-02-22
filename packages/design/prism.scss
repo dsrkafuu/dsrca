@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-@mixin dsr-prism {
+@mixin dsr-prism-style {
   .token {
     &.important,
     &.bold {
