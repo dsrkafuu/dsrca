@@ -1,7 +1,4 @@
 {
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "private": true,
   "type": "module",
   "name": "dsrca",
@@ -19,7 +16,7 @@
   },
   "devDependencies": {
     "@dsrca/config": "workspace:*",
-    "eslint": "^8.34.0",
+    "eslint": "^8.35.0",
     "lerna": "^6.5.1",
     "prettier": "^2.8.4",
     "typescript": "^4.9.5"
