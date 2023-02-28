@@ -9,11 +9,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {
-    "dev": "lerna run dev",
-    "build": "lerna run build",
-    "publish": "lerna publish"
-  },
   "devDependencies": {
     "@dsrca/config": "workspace:*",
     "eslint": "^8.35.0",
