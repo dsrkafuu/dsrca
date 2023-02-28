@@ -14,7 +14,7 @@ Monorepo for DSR projects.
 npx lerna run dev
 npx lerna version
 npx lerna run build
-npx lerna publish
+npx lerna publish from-package
 ```
 
 ### License
