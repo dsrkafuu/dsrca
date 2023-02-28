@@ -8,6 +8,15 @@ Monorepo for DSR projects.
 - `@dsrca/config`
 - `@dsrca/design`
 
+### Development
+
+```
+npx lerna run dev
+npx lerna version
+npx lerna run build
+npx lerna publish
+```
+
 ### License
 
 All apps & pakcages inside this project is released under the `GNU AGPLv3`, for more information read the [License](https://github.com/dsrkafuu/dsrca/blob/main/LICENSE).
