@@ -14,9 +14,10 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "build": "node --experimental-specifier-resolution=node ./build.js"
+    "build": "node --loader @esbuild-kit/esm-loader ./build.js"
   },
   "devDependencies": {
+    "@esbuild-kit/esm-loader": "^2.5.5",
     "@types/fs-extra": "^11.0.1",
     "@types/node": "^20.4.6",
     "chalk": "^5.3.0",
