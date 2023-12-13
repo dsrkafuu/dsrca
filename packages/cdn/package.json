@@ -17,12 +17,12 @@
     "build": "node --loader @esbuild-kit/esm-loader ./build.js"
   },
   "devDependencies": {
-    "@esbuild-kit/esm-loader": "^2.5.5",
-    "@types/fs-extra": "^11.0.1",
-    "@types/node": "^20.4.6",
+    "@esbuild-kit/esm-loader": "^2.6.5",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.10.4",
     "chalk": "^5.3.0",
-    "fs-extra": "^11.1.1",
-    "glob": "^10.3.3",
-    "typescript": "^5.1.6"
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.10",
+    "typescript": "^5.3.3"
   }
 }
