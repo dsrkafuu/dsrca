@@ -4,7 +4,7 @@
   },
   "type": "module",
   "name": "@dsrca/design",
-  "version": "3.5.0",
+  "version": "3.6.0",
   "description": "Styles & library for DSR projects.",
   "author": "DSRKafuU <dsrkafuu@outlook.com>",
   "license": "AGPL-3.0",
