@@ -14,15 +14,14 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "build": "node --loader @esbuild-kit/esm-loader ./build.js"
+    "build": "node ./build.js"
   },
   "devDependencies": {
-    "@esbuild-kit/esm-loader": "^2.6.5",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.14.9",
+    "@types/node": "^22.5.2",
     "chalk": "^5.3.0",
     "fs-extra": "^11.2.0",
-    "glob": "^10.4.2",
-    "typescript": "^4.9.5"
+    "glob": "^11.0.0",
+    "typescript": "~5.4.5"
   }
 }

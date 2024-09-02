@@ -2,7 +2,7 @@ import path from 'path';
 import url from 'url';
 import fse from 'fs-extra';
 import chalk from 'chalk';
-import minify from './minify';
+import minify from './minify.js';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const pkg = fse.readJSONSync(path.resolve(__dirname, './package.json'));
