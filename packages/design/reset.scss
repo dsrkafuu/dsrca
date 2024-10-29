@@ -1,3 +1,5 @@
+@use './variables';
+
 /*! sanitize.css v13.0.0 | CC0-1.0 License | github.com/csstools/sanitize.css */
 
 /* Document
@@ -213,6 +215,7 @@
  */
 
 :where(button, [type='button' i], [type='reset' i], [type='submit' i]) {
+  appearance: button;
   -webkit-appearance: button;
 }
 
@@ -248,6 +251,7 @@
  */
 
 :where([type='search' i]) {
+  appearance: textfield;
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -367,18 +371,16 @@
 /* Customized styles
  * ========================================================================== */
 
-@import './variables.scss';
-
 html,
 body {
-  font-size: $font-md;
-  font-family: $family-body;
+  font-size: variables.$font-md;
+  font-family: variables.$family-body;
 }
 
 pre,
 code {
-  font-size: $font-sm;
-  font-family: $family-mono;
+  font-size: variables.$font-sm;
+  font-family: variables.$family-mono;
   color: inherit;
   font-weight: inherit;
   tab-size: 2;
@@ -392,7 +394,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: $weight-medium;
+  font-weight: variables.$weight-medium;
 }
 
 img.emoji {

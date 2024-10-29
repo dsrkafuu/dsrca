@@ -1,203 +1,201 @@
-@import './variables.scss';
+@use './varibales';
 
-@mixin dsr-markdown-style {
-  .markdown {
-    line-height: $line-height-md;
-    font-size: $font-md;
+@mixin markdown {
+  line-height: varibales.$line-height-md;
+  font-size: varibales.$font-md;
+  word-wrap: break-word;
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1,
+  h2 {
+    font-size: varibales.$font-xl;
+  }
+  h3 {
+    font-size: varibales.$font-lg;
+  }
+  h4 {
+    font-size: varibales.$font-md;
+  }
+  h5 {
+    font-size: varibales.$font-sm;
+  }
+  h6 {
+    font-size: varibales.$font-xs;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: varibales.$weight-medium;
+    margin: 15px 0;
+    color: var(--color-primary);
+
+    code,
+    tt {
+      font-size: 85%;
+    }
+  }
+
+  & > :first-child {
+    margin-top: 0;
+  }
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  p,
+  blockquote,
+  ul,
+  ol,
+  dl,
+  table,
+  pre,
+  details {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul,
+  ol {
+    padding-left: 28px;
+    line-height: varibales.$line-height-lg;
+  }
+
+  ul ul,
+  ul ol,
+  ol ol,
+  ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 16px;
+  }
+
+  li > p {
+    margin: 0;
+  }
+
+  hr {
+    height: varibales.$size-quote;
+    padding: 0;
+    margin: 15px 0;
+    background-color: var(--color-border);
+    border: none;
+  }
+
+  pre {
+    word-wrap: normal;
+    font-size: varibales.$font-sm;
+    font-family: varibales.$family-mono;
+    background-color: var(--color-wrapper);
+    border-radius: varibales.$radius-sm;
+    padding: 15px 16px;
+    overflow-x: auto;
+  }
+
+  kbd,
+  code,
+  tt {
     word-wrap: break-word;
+    word-break: break-all;
+    font-size: varibales.$font-sm;
+    display: inline;
+    font-family: varibales.$family-mono;
+    padding: 2px 6px;
+    color: inherit;
+    background-color: var(--color-wrapper);
+    border-radius: varibales.$radius-sm;
+    hyphens: none;
 
-    a {
-      color: var(--color-primary);
-      text-decoration: none;
+    br {
+      display: none;
+    }
+  }
 
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  pre code {
+    word-wrap: inherit;
+    word-break: inherit;
+    font-size: inherit;
+    display: inline;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    hyphens: none;
 
-    h1,
-    h2 {
-      font-size: $font-xl;
+    br {
+      display: unset;
     }
-    h3 {
-      font-size: $font-lg;
-    }
-    h4 {
-      font-size: $font-md;
-    }
-    h5 {
-      font-size: $font-sm;
-    }
-    h6 {
-      font-size: $font-xs;
-    }
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-weight: $weight-medium;
-      margin: $space-md 0;
-      color: var(--color-primary);
+  del code {
+    text-decoration: inherit;
+  }
 
-      code,
-      tt {
-        font-size: 85%;
-      }
-    }
+  blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    color: inherit;
+    font-size: inherit;
+    border-left: varibales.$size-quote solid var(--color-border);
 
     & > :first-child {
       margin-top: 0;
     }
+
     & > :last-child {
       margin-bottom: 0;
     }
+  }
 
-    p,
-    blockquote,
-    ul,
-    ol,
-    dl,
-    table,
-    pre,
-    details {
-      margin-top: 0;
-      margin-bottom: $space-md;
+  table {
+    display: block;
+    width: 100%;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    background-color: transparent;
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    ul,
-    ol {
-      padding-left: 28px;
-      line-height: $line-height-lg;
-    }
-
-    ul ul,
-    ul ol,
-    ol ol,
-    ol ul {
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-left: 16px;
-    }
-
-    li > p {
-      margin: 0;
-    }
-
-    hr {
-      height: $size-quote;
-      padding: 0;
-      margin: $space-md 0;
-      background-color: var(--color-border);
-      border: none;
-    }
-
-    pre {
-      word-wrap: normal;
-      font-size: $font-sm;
-      font-family: $family-mono;
-      background-color: var(--color-wrapper);
-      border-radius: $radius-sm;
-      padding: 15px 16px;
-      overflow-x: auto;
-    }
-
-    kbd,
-    code,
-    tt {
-      word-wrap: break-word;
-      word-break: break-all;
-      font-size: $font-sm;
-      display: inline;
-      font-family: $family-mono;
-      padding: 2px 6px;
-      color: inherit;
-      background-color: var(--color-wrapper);
-      border-radius: $radius-sm;
-      hyphens: none;
-
-      br {
-        display: none;
-      }
-    }
-
-    pre code {
-      word-wrap: inherit;
-      word-break: inherit;
-      font-size: inherit;
-      display: inline;
-      padding: 0;
+    tr {
       background-color: transparent;
-      border-radius: 0;
-      hyphens: none;
-
-      br {
-        display: unset;
-      }
     }
 
-    del code {
-      text-decoration: inherit;
+    th {
+      font-weight: varibales.$weight-medium;
     }
 
-    blockquote {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      margin-bottom: $space-md;
-      padding: 0 15px;
-      color: inherit;
-      font-size: inherit;
-      border-left: $size-quote solid var(--color-border);
-
-      & > :first-child {
-        margin-top: 0;
-      }
-
-      & > :last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    table {
-      display: block;
-      width: 100%;
-      width: max-content;
-      max-width: 100%;
-      overflow: auto;
-      border-collapse: collapse;
-      margin-bottom: $space-md;
+    th,
+    td {
       background-color: transparent;
-
-      tr {
-        background-color: transparent;
-      }
-
-      th {
-        font-weight: $weight-medium;
-      }
-
-      th,
-      td {
-        background-color: transparent;
-        padding: 4px 12px;
-        border: $size-border solid var(--color-border);
-      }
+      padding: 4px 12px;
+      border: varibales.$size-border solid var(--color-border);
     }
+  }
 
-    img:not(.emoji) {
-      display: block;
-      border-radius: $radius-sm;
-    }
+  img:not(.emoji) {
+    display: block;
+    border-radius: varibales.$radius-sm;
+  }
 
-    .footnotes {
-      font-size: $font-sm;
-    }
+  .footnotes {
+    font-size: varibales.$font-sm;
   }
 }

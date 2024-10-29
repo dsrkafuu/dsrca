@@ -12,12 +12,6 @@ $size-border: 1px;
 $size-quote: 2px;
 $size-bar: 3px;
 
-$space-xl: 22px;
-$space-lg: 17px;
-$space-md: 15px;
-$space-sm: 12px;
-$space-xs: 10px;
-
 $radius-lg: 8px;
 $radius-md: 6px;
 $radius-sm: 4px;
@@ -29,26 +23,8 @@ $font-md: 15px;
 $font-sm: 14px;
 $font-xs: 12px;
 
-$family-cjk: 'Noto Sans SC', 'Noto Sans JP';
-$family-latin: Inter, -apple-system, BlinkMacSystemFont;
-$family-body: $family-latin, $family-cjk, sans-serif;
-$family-mono: 'Fira Code', $family-cjk, monospace;
+$family-body: 'Inter', 'Noto Sans SC', 'Noto Sans JP', sans-serif;
+$family-mono: 'Fira Code', 'Noto Sans SC', 'Noto Sans JP', monospace;
 
 $filter-blur: saturate(180%) blur(3px);
 $filter-mica: saturate(200%) blur(24px);
-
-@mixin responsive($breakpoint) {
-  @if $breakpoint == 'sm' {
-    @media (max-width: 576px) {
-      @content;
-    }
-  } @else if $breakpoint == 'md' {
-    @media (max-width: 768px) {
-      @content;
-    }
-  } @else if $breakpoint == 'lg' {
-    @media (max-width: 992px) {
-      @content;
-    }
-  }
-}
