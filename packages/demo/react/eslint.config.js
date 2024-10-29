@@ -1,4 +1,4 @@
-import config from '@dsrca/config/eslint/eslint.config.js';
+import config from '@dsrca/config/eslint/react.config.js';
 
 /**
  * @type {import('eslint').ESLint.ConfigData}

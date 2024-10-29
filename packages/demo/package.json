@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "@dsrca/demo",
+  "version": "4.0.0",
+  "description": "Demo for DSR projects.",
+  "author": "DSRKafuU <dsrkafuu@outlook.com>",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vue": "^3.5.12"
+  },
+  "devDependencies": {
+    "@dsrca/config": "workspace:*",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vue/tsconfig": "^0.5.1",
+    "eslint": "^9.13.0",
+    "prettier": "^3.3.3",
+    "typescript": "~5.4.5",
+    "vue-tsc": "^2.1.6"
+  }
+}

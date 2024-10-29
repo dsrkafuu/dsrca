@@ -1,12 +1,4 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "lts",
-      "pnpmVersion": "latest"
-    },
-    "ghcr.io/devcontainers-extra/features/prettier:1": {
-      "version": "latest"
-    }
-  }
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "postCreateCommand": "pnpm install"
 }
