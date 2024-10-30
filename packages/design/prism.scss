@@ -1,6 +1,6 @@
 @use './variables';
 
-@mixin dsr-prism-style {
+@mixin token {
   .token {
     &.important,
     &.bold {
