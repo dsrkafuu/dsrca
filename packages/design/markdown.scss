@@ -1,8 +1,8 @@
-@use './varibales';
+@use './variables';
 
 @mixin markdown {
-  line-height: varibales.$line-height-md;
-  font-size: varibales.$font-md;
+  line-height: variables.$line-height-md;
+  font-size: variables.$font-md;
   word-wrap: break-word;
 
   a {
@@ -16,19 +16,19 @@
 
   h1,
   h2 {
-    font-size: varibales.$font-xl;
+    font-size: variables.$font-xl;
   }
   h3 {
-    font-size: varibales.$font-lg;
+    font-size: variables.$font-lg;
   }
   h4 {
-    font-size: varibales.$font-md;
+    font-size: variables.$font-md;
   }
   h5 {
-    font-size: varibales.$font-sm;
+    font-size: variables.$font-sm;
   }
   h6 {
-    font-size: varibales.$font-xs;
+    font-size: variables.$font-xs;
   }
 
   h1,
@@ -37,7 +37,7 @@
   h4,
   h5,
   h6 {
-    font-weight: varibales.$weight-medium;
+    font-weight: variables.$weight-medium;
     margin: 15px 0;
     color: var(--color-primary);
 
@@ -73,7 +73,7 @@
   ul,
   ol {
     padding-left: 28px;
-    line-height: varibales.$line-height-lg;
+    line-height: variables.$line-height-lg;
   }
 
   ul ul,
@@ -90,7 +90,7 @@
   }
 
   hr {
-    height: varibales.$size-quote;
+    height: variables.$size-quote;
     padding: 0;
     margin: 15px 0;
     background-color: var(--color-border);
@@ -99,10 +99,10 @@
 
   pre {
     word-wrap: normal;
-    font-size: varibales.$font-sm;
-    font-family: varibales.$family-mono;
+    font-size: variables.$font-sm;
+    font-family: variables.$family-mono;
     background-color: var(--color-wrapper);
-    border-radius: varibales.$radius-sm;
+    border-radius: variables.$radius-sm;
     padding: 15px 16px;
     overflow-x: auto;
   }
@@ -112,13 +112,13 @@
   tt {
     word-wrap: break-word;
     word-break: break-all;
-    font-size: varibales.$font-sm;
+    font-size: variables.$font-sm;
     display: inline;
-    font-family: varibales.$family-mono;
+    font-family: variables.$family-mono;
     padding: 2px 6px;
     color: inherit;
     background-color: var(--color-wrapper);
-    border-radius: varibales.$radius-sm;
+    border-radius: variables.$radius-sm;
     hyphens: none;
 
     br {
@@ -153,7 +153,7 @@
     padding: 0 15px;
     color: inherit;
     font-size: inherit;
-    border-left: varibales.$size-quote solid var(--color-border);
+    border-left: variables.$size-quote solid var(--color-border);
 
     & > :first-child {
       margin-top: 0;
@@ -179,23 +179,23 @@
     }
 
     th {
-      font-weight: varibales.$weight-medium;
+      font-weight: variables.$weight-medium;
     }
 
     th,
     td {
       background-color: transparent;
       padding: 4px 12px;
-      border: varibales.$size-border solid var(--color-border);
+      border: variables.$size-border solid var(--color-border);
     }
   }
 
   img:not(.emoji) {
     display: block;
-    border-radius: varibales.$radius-sm;
+    border-radius: variables.$radius-sm;
   }
 
   .footnotes {
-    font-size: varibales.$font-sm;
+    font-size: variables.$font-sm;
   }
 }
