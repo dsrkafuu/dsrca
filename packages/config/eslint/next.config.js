@@ -33,7 +33,7 @@ export default [
   },
   {
     plugins: {
-      'next': next,
+      '@next/next': next,
     },
     rules: {
       ...next.configs.recommended.rules,
