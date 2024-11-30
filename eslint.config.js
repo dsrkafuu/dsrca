@@ -11,6 +11,6 @@ export default [
     },
   },
   {
-    ignorePatterns: ['node_modules/', 'lib/', '.DS_Store'],
+    ignores: ['node_modules/**/*', 'lib/**/*', '.DS_Store'],
   },
 ];
