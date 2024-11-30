@@ -10,4 +10,7 @@ export default [
       '@typescript-eslint/no-explicit-any': 'off',
     },
   },
+  {
+    ignorePatterns: ['node_modules/', 'lib/', '.DS_Store'],
+  },
 ];
