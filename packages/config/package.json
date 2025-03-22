@@ -4,12 +4,13 @@
   },
   "type": "module",
   "name": "@dsrca/config",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Shared configs for DSR projects.",
   "author": "DSRKafuU <dsrkafuu@outlook.com>",
   "license": "AGPL-3.0",
   "files": [
     "eslint",
+    "prettier.config.d.ts",
     "prettier.config.js",
     "tsconfig.json"
   ],
