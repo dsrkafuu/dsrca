@@ -1,4 +1,4 @@
-@use './variables';
+@use '@dsrca/design/variables';
 
 @mixin markdown {
   line-height: variables.$line-height-md;
